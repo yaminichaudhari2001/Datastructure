@@ -26,4 +26,24 @@ public class Stack <T> {
             temp=temp.next;
         }
     }
+    public void pop()
+    {
+        if(isempty())
+        {
+            System.out.println("stack is empty");
+        }
+        Node temp=head;
+        head=head.next;
+        System.out.println(temp.number+"is delete");
+    }
+    public void peep()
+    {
+        if(isempty())
+        {
+            System.out.println("stack is empty");
+        }
+        Node temp=head;
+        System.out.println(head.number+" is top number");
+
+    }
 }
