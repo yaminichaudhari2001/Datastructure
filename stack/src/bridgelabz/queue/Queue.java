@@ -1,5 +1,7 @@
 package bridgelabz.queue;
 
+import bridzelabz.stack.Node;
+
 public class Queue {
     Node1 head=null;
     Node1 tail=null;
@@ -22,6 +24,21 @@ public class Queue {
         }
         tail.next=newnode;
         tail=newnode;
+
+    }
+    public void dequeue()
+    {
+        if(isempty())
+        {
+            System.out.println("queue is empty");
+
+        }
+        Node1 temp=head;
+        if (head==tail)
+            tail=null;
+        head=head.next;
+        //head=newnode;
+        System.out.println(temp.number+" is delete");
 
     }
     public void println()
